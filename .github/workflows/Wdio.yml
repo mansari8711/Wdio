@@ -36,8 +36,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-      - name: Install update index        
-        run : git update-index --chmod=+x script.sh
+      - name: Install ts index        
+        run : npm i -D typescript ts-node
 
       # Runs a set of commands using the runners shell
       - name: Run a demo test
