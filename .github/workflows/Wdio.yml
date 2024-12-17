@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Wdio Install 
 
 # Controls when the workflow will run
 on:
@@ -22,15 +22,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+
+      - name: Install Chromium
+        run: sudo apt-get install chromium-browser
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 22.x
+
+      - name: Install dependencies
+        run: npm install
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Run a demo test
+        run: npx wdio .\wdio.conf.ts  

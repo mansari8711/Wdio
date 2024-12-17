@@ -1,0 +1,58 @@
+
+
+Locators -
+
+xpath
+css
+
+Xpath - 
+
+purple color -- Tag Name
+Red Color - Attribute
+Blue Color- Value
+Black Color - Text 
+
+1- //tagname[@attribute='value']
+
+//textarea[@title='Search']
+
+//a[@aria-label='Gmail ']
+
+//a[contains(@aria-label,'Gmail')]
+
+2  //tagname[text()='text value']
+
+//a[text()='Store']
+
+//a[text()='Customer Service']
+
+3- (//a[text()='Customer Service'])[1] --- Indexing wise xpath
+
+
+//a[text()='Today's Deals']
+
+contains
+
+//tagname[contains(text(),'search value')]
+
+//a[contains(text(),'Deals')]
+
+(//a[contains(text(),'De')])[3]   -- with the help of contains
+
+
+before
+
+scenarion 1
+scenario 2
+
+beforeall -- end to end scenario
+
+scenario 1 -- add to cart 
+scenario 2---- go for transcation
+scenario 3 --place order
+
+
+
+
+
+
